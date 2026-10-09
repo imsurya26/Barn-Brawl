@@ -1,0 +1,59 @@
+{
+  "KICKOFF": [
+    "The gates are open. Let the barn brawl begin!",
+    "Hooves ready. Eyes on the rock!"
+  ],
+  "GOAL_SCORED": [
+    "What a finish! That rock is home!",
+    "Goal! The whole barn felt that one!",
+    "Straight through the gate!"
+  ],
+  "ASSIST_AWARDED": [
+    "A perfect setup from a teammate.",
+    "Good teamwork gets the rock moving."
+  ],
+  "SAVE_AWARDED": [
+    "Denied at the gate!",
+    "A fine save keeps the herd alive."
+  ],
+  "BIG_SAVE": [
+    "That is a barnstorming save!",
+    "The goal was open. What a rescue!"
+  ],
+  "LONG_SHOT": [
+    "From the far side of the farm!",
+    "A long shot is on its way!"
+  ],
+  "AERIAL_HIT": [
+    "Flying livestock! What an aerial touch.",
+    "Up in the air, right on the rock."
+  ],
+  "OVERTIME": [
+    "Overtime. The next goal wins!",
+    "All square. One more goal settles it."
+  ],
+  "POWERUP_USED": [
+    "A powerup enters the play.",
+    "A little farm magic changes the game."
+  ],
+  "FINAL_MINUTE": [
+    "One minute left. Make it count.",
+    "The final minute is here."
+  ],
+  "TEN_SECONDS": [
+    "Ten seconds. One last push!",
+    "Just ten seconds on the barn clock."
+  ],
+  "MATCH_VICTORY": [
+    "The final whistle! A win worth celebrating.",
+    "What a match. Take your place on the podium!"
+  ],
+  "COMEBACK": [
+    "The comeback is on!",
+    "Back level after a tough start!"
+  ],
+  "HAT_TRICK": [
+    "Three goals! A hat trick for the herd.",
+    "A third goal. Unstoppable today!"
+  ]
+}

@@ -1,0 +1,2 @@
+import {chromium} from '@playwright/test';
+const browser=await chromium.launch({args:['--enable-webgl','--use-angle=swiftshader','--enable-unsafe-swiftshader']});const page=await browser.newPage({viewport:{width:1400,height:800}});const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('http://localhost:5174/?models=1');await page.waitForTimeout(3000);await page.screenshot({path:'artifacts/verification/animal-rigs.png'});console.log(JSON.stringify({errors}));await browser.close();if(errors.length)process.exitCode=1;
