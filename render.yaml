@@ -16,3 +16,5 @@ services:
         value: 3001
       - key: MATCH_SECONDS
         value: 300
+      - key: ALLOWED_ORIGINS
+        value: https://barn-brawl.vercel.app,https://barn-brawl-suryastudent2626-9460s-projects.vercel.app,https://barn-brawl-server.onrender.com

@@ -25,3 +25,21 @@ Verify two independent browsers on the deployed frontend: both must show ONLINE,
 The ball radius is now 1.6 m, up from 1.15 m: diameter 3.2 m, approximately 39% larger. Rendering, collider, spawn height and goal checks share this constant. Mass and movement tuning are unchanged. Physics-test fixtures place the ball relative to its current radius.
 
 All 34 automated tests passed after the enlargement. Production build and TypeScript checks passed. The real two-browser match passed through goal, victory, rematch and overtime. Earlier reports describe the prior ball size and remain historical.
+
+## Live deployment — 10 October 2026
+
+- Play: https://barn-brawl.vercel.app
+- Server health: https://barn-brawl-server.onrender.com/health
+- WebSocket: wss://barn-brawl-server.onrender.com/ws
+- GitHub: https://github.com/imsurya26/Barn-Brawl
+- Deployed game commit: 485b3692a9171beef65af62cca753e5818e1151c
+- Vercel production deployment: dpl_ATxDXmopSTZ6HhEEQ13nGn7VnbHf (READY).
+- Render service: srv-db4n7qvlk1mc73d8evog, Docker Free, Singapore.
+
+IMPLEMENTED AND TESTED: larger ball, 34 automated tests, production build/TypeScript, local two-browser full match including victory/rematch/overtime, and local pickup/use regression. The live Vercel-to-Render two-browser check passed create/join, animal/boost/map selection, ready/start, camera toggle, replicated movement/boost, physical goal and equal scores, celebration return, jump and flip. No page runtime errors were captured in the live check.
+
+IMPLEMENTED BUT NOT FULLY TESTED: live five-minute match ending/rematch/overtime (verified locally with shorter matches), free-host cold start/recovery and sustained public load. Render logs contain a nonfatal Rapier initialization deprecation warning; Vite reports a nonfatal large-chunk warning.
+
+REQUIRES EXTERNAL INFRASTRUCTURE: paid always-on hosting would be needed for stronger availability; no paid service was purchased. Free Render hosting can sleep and lose in-memory matches on restart. If the first connection times out while waking, wait about a minute and reconnect or refresh.
+
+The Render service was created from the public repository URL. Do not assume automatic deployments: verify and manually deploy the latest commit in Render after future server changes. Vercel Preview URLs are not included in the server origin allowlist; add an exact preview origin deliberately if multiplayer preview testing is required.
