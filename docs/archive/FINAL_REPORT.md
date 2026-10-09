@@ -1,6 +1,6 @@
 # Barn Brawl continuation — 9 October 2026
 
-Historical report. The subsequent ball enlargement and hosting setup are documented in [DEPLOYMENT.md](DEPLOYMENT.md).
+Historical report. The subsequent ball enlargement and hosting setup are documented in [deployment guide](../DEPLOYMENT.md).
 
 The existing project was preserved and the local production game was rebuilt and opened at http://localhost:3001. GitHub publication remains paused at the user's request.
 

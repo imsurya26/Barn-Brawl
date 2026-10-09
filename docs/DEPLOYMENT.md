@@ -32,8 +32,8 @@ All 34 automated tests passed after the enlargement. Production build and TypeSc
 - Server health: https://barn-brawl-server.onrender.com/health
 - WebSocket: wss://barn-brawl-server.onrender.com/ws
 - GitHub: https://github.com/imsurya26/Barn-Brawl
-- Deployed game commit: 485b3692a9171beef65af62cca753e5818e1151c
-- Vercel production deployment: dpl_ATxDXmopSTZ6HhEEQ13nGn7VnbHf (READY).
+- Verified game release: 485b3692a9171beef65af62cca753e5818e1151c; deployment configuration record: 4d30eeff3e8ec333f03c070b9683d258e70f9afd.
+- Verified production deployment at publication: dpl_2AMt98eWfpYVvuYPVYbXRRN6NCSq (READY). Later pushes create new deployments.
 - Render service: srv-db4n7qvlk1mc73d8evog, Docker Free, Singapore.
 
 IMPLEMENTED AND TESTED: larger ball, 34 automated tests, production build/TypeScript, local two-browser full match including victory/rematch/overtime, and local pickup/use regression. The live Vercel-to-Render two-browser check passed create/join, animal/boost/map selection, ready/start, camera toggle, replicated movement/boost, physical goal and equal scores, celebration return, jump and flip. No page runtime errors were captured in the live check.
@@ -42,4 +42,8 @@ IMPLEMENTED BUT NOT FULLY TESTED: live five-minute match ending/rematch/overtime
 
 REQUIRES EXTERNAL INFRASTRUCTURE: paid always-on hosting would be needed for stronger availability; no paid service was purchased. Free Render hosting can sleep and lose in-memory matches on restart. If the first connection times out while waking, wait about a minute and reconnect or refresh.
 
-The Render service was created from the public repository URL. Do not assume automatic deployments: verify and manually deploy the latest commit in Render after future server changes. Vercel Preview URLs are not included in the server origin allowlist; add an exact preview origin deliberately if multiplayer preview testing is required.
+The Render service was created from the public repository URL. A subsequent GitHub push triggered automatic deployments on both Render and Vercel. Verify both deployments after future changes; use a manual deployment if an automatic one does not start. Vercel Preview URLs are not included in the server origin allowlist; add an exact preview origin deliberately if multiplayer preview testing is required.
+
+## Optional Docker / Caddy hosting
+
+For a self-managed Linux host with Docker and a domain pointing to it, set `SITE_DOMAIN` for `compose.yaml`, allow ports 80 and 443, and run `docker compose up -d --build` from the repository root. Caddy uses `deploy/Caddyfile` for TLS and WebSocket forwarding. Keep the game service internal to the Compose network. This alternative has not been executed as part of the hosted release verification.
