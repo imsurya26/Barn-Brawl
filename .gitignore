@@ -9,3 +9,5 @@ playwright-report/
 .vercel/
 artifacts/
 .npm-cache/
+LinkedIn/
+docs/CLEANUP_REPORT.md
